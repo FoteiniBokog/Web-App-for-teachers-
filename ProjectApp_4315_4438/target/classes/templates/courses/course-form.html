@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Course</title>
+</head>
+
+<body>
+	
+	<div class="container">
+	
+		<h1>Course Directory</h1>
+		<hr>
+		
+		<p class="h4 mb-4">Save Course </p>
+	
+		<form action="#" th:action="@{/courses/save}"
+						 th:object="${courses}" method="post">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{CourseId}" />
+			
+			<input type="text" th:field="*{professor}"
+					class="form-control mb-4 col-4" placeholder="professor">
+
+			<input type="text" th:field="*{semester}"
+					class="form-control mb-4 col-4" placeholder="semester">
+
+			<input type="text" th:field="*{CourseName}"
+					class="form-control mb-4 col-4" placeholder="CourseName">
+			
+			<input type="text" th:field="*{year}"
+					class="form-control mb-4 col-4" placeholder=" year">
+			
+			
+			<input type="text" th:field="*{syllabus}"
+					class="form-control mb-4 col-4" placeholder=" syllabus">
+				
+			
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		
+		<a th:href="@{/courses/list}">Back to Courses List</a>
+		
+	</div>
+</body>
+
+</html>
