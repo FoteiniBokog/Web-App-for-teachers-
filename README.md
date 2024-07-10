@@ -3,4 +3,4 @@ they want for the courses that they teach ,the students that are  registered to 
 those data (update ,delete).The application for every student consists of five fields (first Name, last 
 name , students id ,exam grade and project grade) that keep the necessary information for every student. 
 The list of the course consists of six fields(Course id, professor, semester, Course Name, year, syllabus) 
-that also keep the information necessary.
+that also keep the necessary information.
